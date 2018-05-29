@@ -4,6 +4,8 @@ var myScore;
 var x = 350
 var r = 50
 
+//https://www.w3schools.com/graphics/game_intro.asp
+
 function startGame() {
     // myGamePiece = new component(30, 30, "blue", 240, 10);
     // myGamePiece.gravity = 0.05;
@@ -15,26 +17,6 @@ function startGame() {
     
     var n = 0
     var x = 320
-    // ctx.beginPath();
-    // ctx.setLineDash([5, 15]);
-    // ctx.moveTo(0, 50);
-    // ctx.lineTo(400, 50);
-    // ctx.stroke();
-
-    // ctx.beginPath();
-    // ctx.setLineDash([]);
-    // ctx.moveTo(0, 150);
-    // ctx.lineTo(400, 150);
-    // ctx.stroke();
-
-    // ctx.beginPath();
-    //circle 
-    //ctx.arc(100,75,50,0,2*Math.PI);
-    // ctx.arc(95,50,40,0,2*Math.PI);
-    // ctx.arc(100,75,50,1.5*Math.PI,0*Math.PI)
-    // ctx.arc(100,75,50,0,1.5*Math.PI)
-    //center, center, start angle, end angle
-    //context.arc(x,y,r,sAngle,eAngle,counterclockwise); https://www.w3schools.com/tags/canvas_arc.asp
     
     // height (y) = 480, width (x) = 640
     ctx.arc(320,470,r,Math.PI,0);
@@ -53,8 +35,11 @@ function startGame() {
     ctx.lineTo(x,400);
     ctx.stroke();    
 
-    
 
+    // adds a bucket to the screen
+    // var bucketball1 = new component(30, 30, "red", 10, 120);
+    myGamePiece = new component(40, 40, "red", 10, 600);
+    myGamePiece.update();
     
     
 
@@ -133,11 +118,7 @@ function fire(){
   
     }
 
-    // this works
-// function test(){
-//     alert("This clicked");
 
-// }
 
 
 function showCoords(event) {
@@ -155,28 +136,28 @@ function clearCoor() {
 
 
 
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        // x variable for height
-        this.canvas.width = 480;
-        // y variable for width
-        this.canvas.height = 640;
-        this.canvas.style = solid;
-        this.canvas.color = d3d3d3;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.context.beginPath();
-        this.context.arc(95,50,40,0,2*Math.PI);
-        this.context.stroke();
-        // this.frameNo = 0;
-        // this.interval = setInterval(updateGameArea, 20);
-        },
+// var myGameArea = {
+//     canvas : document.createElement("canvas"),
+//     start : function() {
+//         // x variable for height
+//         this.canvas.width = 480;
+//         // y variable for width
+//         this.canvas.height = 640;
+//         this.canvas.style = solid;
+//         this.canvas.color = d3d3d3;
+//         this.context = this.canvas.getContext("2d");
+//         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+//         this.context.beginPath();
+//         this.context.arc(95,50,40,0,2*Math.PI);
+//         this.context.stroke();
+//         // this.frameNo = 0;
+//         // this.interval = setInterval(updateGameArea, 20);
+//         },
         
-    clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-}
+//     clear : function() {
+//         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+//     }
+// }
 
 
 
@@ -269,8 +250,8 @@ function component(width, height, color, x, y, type) {
 //     myGamePiece.update();
 // }
 
-function everyinterval(n) {
-    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
-    return false;
-}
+// function everyinterval(n) {
+//     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+//     return false;
+// }
 
