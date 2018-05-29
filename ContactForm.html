@@ -6,36 +6,53 @@
         <title>Sign Up Form</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
-    <h1>This is a Place Holder.  Under Construction</h1>
+    <h1>Contact Keith Frederick.  This is a Place Holder.  Under Construction</h1>
+
+    <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="game.html">Games</a></li>
+                <li><a href="https://www.youtube.com/channel/UCCHvvW43VtVI5iurnXFBB5g">Videos</a></li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropbtn">Contact</a>
+                  <div class="dropdown-content">
+                      <a href="https://www.linkedin.com/in/keith-frederick-62569847/">Keith Frederick</a>
+                      <a href="ContactForm.html">Contact Me</a>
+                    </div>
+                  </li>
+                <li style="float:right"><a class="active" href="about.asp">About</a></li>
+            </ul>
+            
+        </nav>
     <body>
         <form action ="index.html" method="post"></form>
-        <h1>Sign Up</h1>
-        
+        <br>
         <fieldset>
 
-            <legend><span = class ="number">5</span> Your Basic Info</legend>
+            <legend><span = class ="number">1</span> Contact Information:</legend>
 
             <label for="name">Name:</label>
             <input type="text" id="name" name="user name">
             <label for="email">Email:</label>
             <input type="email" id="mail" name="user_email">
-            <label for="password">password:</label>
-            <input type = "password" id="password" name = "user_password">
+            <!-- <label for="password">password:</label> -->
+            <!-- <input type = "password" id="password" name = "user_password"> -->
             
-            <label>Age:</label>
+            <!-- <label>Age:</label>
             <input type = "radio" id= "Under_13" value="under_13" name="user_age"><label for ="under_13" class="light">Under 13</label><br>
             <input type = "radio" id= "Over_13" value="over_13" name="user_age"><label for ="under_13" class="light">13 or Older</label>
-            <label for="bio">Bio:</label>
+            <label for="bio">Bio:</label> -->
 
         </fieldset>
             <fieldset>
-                    <legend><span = class ="number">2</span> Your Profile</legend>   
+                    <legend><span = class ="number">2</span> Your Message</legend>   
             <textarea id = "bio" name="user_bio"></textarea>
-<label for ="job">Job Role:</label>
+<!-- <label for ="job">Job Role:</label> -->
 
-<select id="job name="user_job">
+<!-- <select id="job name="user_job">
     <optgroup label="Web">
         <option value = "frontend_developer">front-end developer</option>
         <option value = "php_developer">PHP developer</option>
@@ -60,9 +77,9 @@
     
     <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
     <input type="checkbox" id="Design" value="Design_development" name="user_interest"><label class="light" for="Design">Design</label><br>
-    <input type="checkbox" id="business" value="business_development" name="user_interest"><label class="light" for="business">Business</label><br>    
+    <input type="checkbox" id="business" value="business_development" name="user_interest"><label class="light" for="business">Business</label><br>     -->
 </fieldset>
 
-        <button type="submit">Sign Up</button>
+        <button type="submit">Send Message</button>
     </body>
 </html>
