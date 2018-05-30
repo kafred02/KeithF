@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Bucket Balls</title>
+  <meta name="Bucket Balls Game" content="The HTML5 Herald">
+  <meta name="Keith Frederick" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<header>
+  <h1>Bucket Balls</h1>
+</header>
+
+<nav>
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="game.html">Games</a></li>
+      <li><a href="https://www.youtube.com/channel/UCCHvvW43VtVI5iurnXFBB5g">Videos</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Contact</a>
+        <div class="dropdown-content">
+            <a href="https://www.linkedin.com/in/keith-frederick-62569847/">Keith Frederick</a>
+            <a href="">Contact Me</a>
+          </div>
+        </li>
+      <li style="float:right"><a class="active" href="about.asp">About</a></li>
+  </ul>
+  
+</nav>
+
+<body onload="startGame()">
+  
+    <article>
+        
+            <br><canvas id="canvas" width="640" height="480" onmousedown="fire()" style="border:1px solid #d3d3d3;" onmousemove="moveshaftright(event)" onmouseout="clearCoor()" ></canvas>
+            
+            
+            <p1>
+            <script src="JS\Buckets.js"></script>
+            </p1>
+            <br>
+            <div ></div>
+            <button onmousedown="startGame(-1)"><----</button>
+            <button onmousedown="startGame(+1)">----></button>
+            
+            <p id="demo"></p>
+</body>
+            <!-- left = 37
+                  up = 38
+                  right = 39
+                  down = 40-->
+                  
+
+
+
+</html>
