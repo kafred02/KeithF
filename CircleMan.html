@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Bucket Balls</title>
-  <meta name="Bucket Balls Game" content="The HTML5 Herald">
+  <title>Circle Man</title>
+  <meta name="Circle Man" content="The HTML5 Herald">
   <meta name="Keith Frederick" content="SitePoint">
 
   <link rel="stylesheet" href="css/styles.css">
@@ -17,20 +17,26 @@
 </head>
 
 <header>
-  <h1>Bucket Balls</h1>
+  <h1>Circle Man</h1>
 </header>
-
+<br>
 <nav>
   <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="game.html">Games</a></li>
+      <li><a href="News.html">News</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Games</a>
+        <div class="dropdown-content">
+          <a href="Buckets.html">Buckets</a>
+          <a href="CircleMan.html">Circle Man</a>
+        </div>
+      </li>
       <li><a href="https://www.youtube.com/channel/UCCHvvW43VtVI5iurnXFBB5g">Videos</a></li>
       <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Contact</a>
         <div class="dropdown-content">
             <a href="https://www.linkedin.com/in/keith-frederick-62569847/">Keith Frederick</a>
-            <a href="">Contact Me</a>
+            <a href="ContactForm.html">Contact Me</a>
           </div>
         </li>
       <li style="float:right"><a class="active" href="about.asp">About</a></li>
@@ -42,11 +48,10 @@
   
     <article>
         
-            <br><canvas id="canvas" width="640" height="480" onmousedown="fire()" style="border:1px solid #d3d3d3;" onmousemove="moveshaftright(event)" onmouseout="clearCoor()" ></canvas>
             
             
             <p1>
-            <script src="JS\Bucket Ball.js"></script>
+            <script src="JS\CircleMan.js"></script>
             </p1>
             <br>
             <div ></div>
