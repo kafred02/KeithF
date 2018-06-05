@@ -189,11 +189,19 @@ function component(width, height, color, x, y, type) {
         this.y += this.speedY + this.gravitySpeed;
         this.hitBottom();
     }
+    
     this.hitBottom = function() {
         var rockbottom = myGameArea.canvas.height - this.height;
+        var rocktop = myGameArea.canvas.height;
         if (this.y > rockbottom) {
             this.y = rockbottom;
             this.gravitySpeed = 0;
+            alert("this worked!")
+        }
+        else if (this.y < rocktop){
+            this.y = rocktop;
+            this.gravitySpeed = 0;
+            alert("This worked")
         }
     }
     this.crashWith = function(otherobj) {

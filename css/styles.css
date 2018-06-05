@@ -142,3 +142,22 @@ canvas {
     background-color: #f1f1f1;
     /* margin: 25px 50px 75px 100px; */
 }
+
+
+.main-header{
+    position:fixed;
+    width:100%;
+    top: 0;
+
+
+}
+
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
