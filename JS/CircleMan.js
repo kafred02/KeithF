@@ -7,6 +7,7 @@ function startGame() {
     myGameArea.start();
 }
 
+// this is an object
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -24,6 +25,7 @@ var myGameArea = {
     }
 }
 
+// this is a class?
 function component(width, height, color, x, y, type) {
     this.type = type;
     this.width = width;
@@ -143,7 +145,9 @@ function component(width, height, color, x, y, type) {
 }
 
 function updateGameArea() {
+    // clears the game function
     myGameArea.clear();
+    //uupdates the positions
     myGamePiece.newPos();
     myGamePiece.update();
 }

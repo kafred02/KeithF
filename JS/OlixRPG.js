@@ -1,0 +1,5 @@
+var myGamePiece;
+var myScore;
+
+
+
