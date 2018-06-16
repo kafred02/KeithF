@@ -156,12 +156,28 @@ canvas {
 	margin-top: 15px;
 }
 
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
 /* ================================= 
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
-
+    .primary,
+	.secondary {
+		width: 50%;
+    }
+    .col {
+		float: left;
+	}
 	
 }
 	/* ---- Float clearfix ---- */
@@ -172,3 +188,20 @@ canvas {
 		clear: both;
 	}
 
+@media (min-width: 1025px) {
+	
+        .container {
+            width: 80%;
+            max-width: 1150px;
+        }
+    
+        .primary {
+            width: 40%;
+        }
+    
+        .secondary
+        {
+            width: 50%;
+        }
+    
+    }
