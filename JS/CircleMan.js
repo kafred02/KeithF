@@ -5,6 +5,7 @@ function startGame() {
     myGamePiece = new component(30, 30, "red", 80, 75);
     myScore = new component("30px", "Consolas", "black", 40, 40, "text");
     myGameArea.start();
+    
 }
 
 // this is an object
@@ -15,8 +16,16 @@ var myGameArea = {
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[3]);
-        this.interval = setInterval(updateGameArea, 20);        
-    },
+        this.interval = setInterval(updateGameArea, 20);  
+        window.addEventListener('keydown', function (e) {
+            myGameArea.key = e.keyCode;
+        })
+        window.addEventListener('keyup', function (e) {
+            myGameArea.key = false;
+        })
+    }, 
+        
+
     stop : function() {
         clearInterval(this.interval);
     },    
@@ -68,6 +77,8 @@ function component(width, height, color, x, y, type) {
         this.gravitySpeed += this.gravity;
         this.x += this.speedX;
         this.y += this.speedY + this.gravitySpeed;
+
+        
         
         // this.hitwall();
         this.hitBottom();
@@ -147,9 +158,15 @@ function component(width, height, color, x, y, type) {
 function updateGameArea() {
     // clears the game function
     myGameArea.clear();
+    
+    if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX -= 1; }
+    if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX += 1; }
+    if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY -= 1; }
+    if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY += 1; }
     //uupdates the positions
     myGamePiece.newPos();
     myGamePiece.update();
+    
 }
 
     // this.hitTop = function() {
@@ -161,6 +178,23 @@ function updateGameArea() {
     // }
 
 
+    // if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -1; }
+    // if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 1; }
+    // if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -1; }
+    // if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 1; }
+
+
+// function checkinput(){
+//     // left arrow
+//     if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -1; }
+//     // right arrow
+//     if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 1; }
+//     // up arrow
+//     if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -1; }
+//     // down arrow
+//     if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 1; }
+
+// }
 
 function moveup() {
     myGamePiece.speedY -= 1; 
@@ -178,9 +212,9 @@ function moveright() {
     myGamePiece.speedX += 1; 
 }
 
-function updateGameArea() {
-    myGameArea.clear();
-    myGamePiece.newPos();
-    myGamePiece.update();
-}
+// function updateGameArea() {
+//     myGameArea.clear();
+//     myGamePiece.newPos();
+//     myGamePiece.update();
+// }
 

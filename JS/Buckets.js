@@ -222,6 +222,8 @@ function component(width, height, color, x, y, type) {
 }
 
 
+
+
 // This section updates the games.  Moves the backs from left to right
 
 

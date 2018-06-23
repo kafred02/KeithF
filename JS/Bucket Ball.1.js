@@ -10,7 +10,8 @@ function startGame() {
 
     var canvas = document.getElementById('canvas');
     var ctx = canvas.getContext('2d');
-
+    
+    
     // ctx.beginPath();
     // ctx.setLineDash([5, 15]);
     // ctx.moveTo(0, 50);
