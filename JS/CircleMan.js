@@ -3,12 +3,13 @@ var myScore;
 
 function startGame() {
     myGamePiece = new component(30, 30, "red", 80, 75);
+    myObstacle  = new component(10, 200, "green", 300, 120);
     myScore = new component("30px", "Consolas", "black", 40, 40, "text");
     myGameArea.start();
     
 }
 
-// this is an object
+// this is the game area.  It creates a canvas and also runs game by refreshing the frames.  This also includes the event listener for the keyboard
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -34,7 +35,7 @@ var myGameArea = {
     }
 }
 
-// this is a class?
+// this is the main object.  It creates the text, and circle depending on conditions.
 function component(width, height, color, x, y, type) {
     this.type = type;
     this.width = width;
@@ -158,12 +159,12 @@ function component(width, height, color, x, y, type) {
 function updateGameArea() {
     // clears the game function
     myGameArea.clear();
-    
+    // keyboard commands, and directing where the game piece goes.
     if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX -= 1; }
     if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX += 1; }
     if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY -= 1; }
     if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY += 1; }
-    //uupdates the positions
+    //updates the positions
     myGamePiece.newPos();
     myGamePiece.update();
     
