@@ -4,14 +4,14 @@
 
 /* ---- Navigation ---- */
 
-nav {
+navsticky {
     position: sticky;
     /* position: -webkit-sticky; */
-    top: 0; 
-    z-index: 99;
-  }
+    
+  } 
+ 
 
-ul {
+/* ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -30,9 +30,9 @@ li a, .dropbtn {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
+} */
 
-li.dropdown {
+/* li.dropdown {
     display: inline-block;
 }
 
@@ -57,7 +57,7 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 
 /* a.active:hover{
@@ -206,3 +206,4 @@ canvas {
         }
     
     }
+

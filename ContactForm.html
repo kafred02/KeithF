@@ -7,85 +7,125 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/styles.css">
+         <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <h1>Contact Keith Frederick.  This is a Place Holder.  Under Construction</h1>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="News.html">News</a></li>
-            <li class="dropdown">
-              <a href="javascript:void(0)" class="dropbtn">Games</a>
-              <div class="dropdown-content">
-                <a href="Buckets.html">Buckets</a>
-                <a href="CircleMan.html">Circle Man</a>
+    
+<!-- css NavBar - Bootstrap 4 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navsticky fixed-top" >
+        <a class="navbar-brand" href="#">Welcome</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="News.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="photos.html">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="videos.html">Videos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Games
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="Buckets.html">Buckets</a>
+                <a class="dropdown-item" href="CircleMan.html">Circle Man</a>
+                <a class="dropdown-item" href="OlixRPG.html">Olix the RPG</a>
               </div>
             </li>
-            <li><a href="https://www.youtube.com/channel/UCCHvvW43VtVI5iurnXFBB5g">Videos</a></li>
-            <li class="dropdown">
-              <a href="javascript:void(0)" class="dropbtn">Contact</a>
-              <div class="dropdown-content">
-                  <a href="https://www.linkedin.com/in/keith-frederick-62569847/">Keith Frederick</a>
-                  <a href="ContactForm.html">Contact Me</a>
-                </div>
-              </li>
-            <li style="float:right"><a class="active" href="about.asp">About</a></li>
-        </ul>
-        
-    </nav>
+      
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contacts
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="https://www.linkedin.com/in/keith-frederick-62569847/">Keith Frederick</a>
+                <a class="dropdown-item" href="ContactForm.html">Contact me</a>
+              </div>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+
+<!-- Css bootstrap -  begginning of form input -->
+
     <body>
-        <form action ="index.html" method="post"></form>
-        <br>
-        <fieldset>
-
-            <legend><span = class ="number">1</span> Contact Information:</legend>
-
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user name">
-            <label for="email">Email:</label>
-            <input type="email" id="mail" name="user_email">
-            <!-- <label for="password">password:</label> -->
-            <!-- <input type = "password" id="password" name = "user_password"> -->
-            
-            <!-- <label>Age:</label>
-            <input type = "radio" id= "Under_13" value="under_13" name="user_age"><label for ="under_13" class="light">Under 13</label><br>
-            <input type = "radio" id= "Over_13" value="over_13" name="user_age"><label for ="under_13" class="light">13 or Older</label>
-            <label for="bio">Bio:</label> -->
-
-        </fieldset>
-            <fieldset>
-                    <legend><span = class ="number">2</span> Your Message</legend>   
-            <textarea id = "bio" name="user_bio"></textarea>
-<!-- <label for ="job">Job Role:</label> -->
-
-<!-- <select id="job name="user_job">
-    <optgroup label="Web">
-        <option value = "frontend_developer">front-end developer</option>
-        <option value = "php_developer">PHP developer</option>
-        <option value = "python_developer">Python_developer</option>
-        <option value = "rails_developer">rails_developer</option>
-        <option value = "web_designer">web_designer</option>
-        <option value = "wordpress_developer">wordpress_developer</option>
-    </optgroup>
-    <optgroup label="Mobile">    
-        <option value = "andriod_developer">Andriod Developer</option>
-        <option value = "ios_developer">ios_developer</option>  
-        <option value = "mobile_designer">mobile designer</option>
-    </optgroup> 
-    <optgroup label="Business">
-        <option value = "business_owner">business owner</option>
-        <option value = "freelance">freelance</option>
-    </optgroup> 
-
-</select>
-
-    <label>Interests:</label>
-    
-    <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
-    <input type="checkbox" id="Design" value="Design_development" name="user_interest"><label class="light" for="Design">Design</label><br>
-    <input type="checkbox" id="business" value="business_development" name="user_interest"><label class="light" for="business">Business</label><br>     -->
-</fieldset>
-
-        <button type="submit">Send Message</button>
-    </body>
+        <form class="needs-validation mt-5 pt-5 mr-5 pr-5 ml-5 pl-5" novalidate>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationCustom01">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationCustomUsername">Email Address</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  </div>
+                  <input type="text" class="form-control" id="validationCustomUsername" placeholder="example@email.com" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please enter an email
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row form-group" >
+              <div class="md-6 mb-3">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" cols="500" rows="5" ></textarea>
+                <div class="invalid-feedback">
+                  Please write a message.
+                </div>
+              </div>
+             
+             
+            </div>
+           
+            <button class="btn btn-primary" type="submit">Submit form</button>
+          </form>
+          
+          <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
