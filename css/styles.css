@@ -4,7 +4,7 @@
 
 /* ---- Navigation ---- */
 
-navsticky {
+nav {
     position: sticky;
     /* position: -webkit-sticky; */
     
@@ -165,6 +165,19 @@ canvas {
 .col {
 	padding-right: 1em;
 	padding-left: 1em;
+}
+
+.videoheader{
+    border-width: 1em;
+    border: solid black;
+    font-size: 115px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+	font-style: normal;
+	font-variant: normal;
+    font-weight: 500;
+    background-color: rgba(209, 237, 245, 1);
+	
+
 }
 
 /* ================================= 
