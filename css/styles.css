@@ -65,9 +65,9 @@ li a, .dropbtn {
 } */
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: #111;
-}
+/* li a:hover {
+    background-color: rgb(218, 217, 228);
+} */
 
 
 
@@ -79,17 +79,24 @@ li a:hover {
 
 .active {
     /* color: #111; */
-    color: white;
+    color: rgb(28, 18, 128);
     
+    /* this can color the 'home to green'
     background-color: #4CAF50;
+     */
 }
 
 
 div.gallery {
+
+    background: linear-gradient(to bottom, rgb(4, 3, 70), rgb(20, 17, 155));
+    /* background-color: rgb(38, 36, 150); */
     position: relative;
     text-align: center;
     border: 1px solid #ccc;
 }
+
+
 
 div.gallery:hover {
     border: 1px solid #777;
@@ -125,7 +132,7 @@ div.gallery:hover {
 
 
 h1{
-    text-indent: 270px;
+    
     margin: auto;
     justify-content: center;
 
@@ -179,6 +186,158 @@ canvas {
 	
 
 }
+
+.underConstruction{
+
+    border-width: 1em;
+    border: solid black;
+    font-size: 115px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+	font-style: normal;
+	font-variant: normal;
+    font-weight: 500;
+    background-color: rgb(250, 242, 0);
+
+
+}
+
+.navbar-silver{
+    
+    background: linear-gradient(to bottom, rgb(218, 217, 228), rgb(178, 178, 194));
+    
+    
+}
+
+/* this is code copied from boostrap css for nav-toggler.  this edits the button slightly, and changes the color to black as opposed to transparent */
+.navbar-toggler{
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: black;;
+    border: 1px solid black;;
+    border-radius: .25rem;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-color:rgb(178, 178, 194);
+}
+
+/* ================================= 
+  NEWS HTML SECTION
+==================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background-color: #fff;
+  /* margin: 30px; */
+}
+
+
+img {
+    border-radius: 64px;
+}
+
+p.menu  {
+    text-align: right;
+}
+
+a {
+    color: blue;
+}
+
+label{
+  margin-top: 30px;
+  display: block;
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+input, textarea {
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #cdcfcf;
+    margin-top:5px;
+    padding: 20px;
+    color: #333;
+    background-color: #f6f8f8;
+}
+
+textarea {
+    height: 200px;
+}
+
+button {
+  background: #6388a4;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  padding: 15px 30px;
+  cursor: pointer;
+  text-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+.blogPage-title{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+}
+
+#blogTitlePreview{
+  font-family: serif;
+  font-size: 40px
+}
+
+#blogContentPreview{
+  line-height: 25px;
+  color: #666;
+  font-family: serif;
+  font-size: 18px;
+}
+
+#flashMessage {
+    color: white;
+    background-color: #64ce83;
+    padding: 15px;
+    border-radius: 5px;
+    display: block;
+    width: calc(100% - 100px);
+    margin-bottom: 40px;
+}
+
+.blogNewPost{
+  float: left;
+  width: 30%;
+}
+
+.blogPreviewArea{
+  float: left;
+  width: 40%;
+  margin-top: -10px;
+  margin-left: 100px;
+  min-height: 400px;
+}
+
+
+
+
 
 /* ================================= 
   Media Queries

@@ -2,8 +2,9 @@ var myGamePiece;
 var myScore;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "red", 80, 75);
-    myObstacle  = new component(10, 200, "green", 300, 120);
+    myGamePiece = new component(30, 30, "red", 80, 75, "circleMan");
+    myObstacle  = new component(10, 200, "green", 300, 120, "obstacle");
+    myWall1 = new component(10,200, "brown", 300, 120 )
     myScore = new component("30px", "Consolas", "black", 40, 40, "text");
     myGameArea.start();
     
@@ -16,8 +17,10 @@ var myGameArea = {
         this.canvas.width = 480;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
+        // inserts the canvas into the html
         document.body.insertBefore(this.canvas, document.body.childNodes[3]);
         this.interval = setInterval(updateGameArea, 20);  
+        // event lister that listens for the keystrokes 
         window.addEventListener('keydown', function (e) {
             myGameArea.key = e.keyCode;
         })
@@ -30,6 +33,7 @@ var myGameArea = {
     stop : function() {
         clearInterval(this.interval);
     },    
+        // clears the canvas every interval - this refreshes the screens.
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
@@ -47,13 +51,16 @@ function component(width, height, color, x, y, type) {
     this.gravity = 0.1;
     this.gravitySpeed = 0;
     this.bounce = 0.3;
+    // updates the functions creates the circle, or test.
     this.update = function() {
         ctx = myGameArea.context;
         if (this.type == "text") {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;
             ctx.fillText(this.text, this.x, this.y);
-        } else {
+        } else if(this.type == "circleMan")
+        
+        {
         ctx.beginPath();
         ctx.arc(this.x,this.y,30,0,2*Math.PI);
         ctx.fillStyle = color;
@@ -63,7 +70,7 @@ function component(width, height, color, x, y, type) {
         // ctx.lineWidth = 30;
         // ctx.strokeStyle = "#000000";
         ctx.stroke();
-          }
+          }else()=>{}
 
         // ctx.beginPath();
         // ctx.arc(this.x,this.y,100,0,2*Math.PI);
@@ -122,37 +129,14 @@ function component(width, height, color, x, y, type) {
         if (this.x > rockright){
             this.x -= rockright;
             this.gravityspeed = 0;
+            
 
-
+            // this is where I think I would add the function.  If this location is pressed 10 times then move forward.
         }
 
 
     }
 
-
-    //This creates a cool dribble effect
-    // this.hitBottom = function() {
-    //     var rockbottom = myGameArea.canvas.height - this.height;
-    //     var rocktop = myGameArea.canvas.height + this.height;
-    //     if (this.y > rockbottom) {
-    //         this.y = rockbottom;
-    //         this.gravitySpeed = 0;
-            
-    //     }
-    //     else if (this.y < 0){
-    //         this.y = this.height;
-    //         this.gravitySpeed = 1;
-    //         // alert("This worked")
-    //     }
-    // }
-
-    // this.hitTop = function() {
-    //     var rocktop = myGameArea.canvas.height;
-    //     if (this.y < rocktop) {
-    //         this.y = rocktop;
-    //         this.gravitySpeed = -(this.gravitySpeed * this.bounce);
-    //     }
-    // }
 
 }
 
@@ -165,6 +149,7 @@ function updateGameArea() {
     if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY -= 1; }
     if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY += 1; }
     //updates the positions
+    // myObstacle.update();
     myGamePiece.newPos();
     myGamePiece.update();
     
