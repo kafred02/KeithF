@@ -182,8 +182,8 @@ canvas {
 	font-style: normal;
 	font-variant: normal;
     font-weight: 500;
-    background-color: rgba(209, 237, 245, 1);
-	
+    background-color: rgb(200, 200, 206);
+	/* background:  */
 
 }
 
@@ -204,7 +204,10 @@ canvas {
 .navbar-silver{
     
     background: linear-gradient(to bottom, rgb(218, 217, 228), rgb(178, 178, 194));
+    /* background: linear-gradient(to bottom, rgb(4, 3, 70), rgb(20, 17, 155)); */
     
+    border-style: solid;
+    border-width: 1px;
     
 }
 
@@ -233,11 +236,11 @@ canvas {
   NEWS HTML SECTION
 ==================================== */
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 body{
   background-color: #fff;
@@ -254,7 +257,9 @@ p.menu  {
 }
 
 a {
-    color: blue;
+     color: black;
+     /* color: white; */
+    /*color: blue; */
 }
 
 label{
