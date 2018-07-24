@@ -4,7 +4,7 @@ var myScore;
 function startGame() {
     myGamePiece = new component(30, 30, "red", 80, 75, "circleMan");
     myObstacle  = new component(10, 200, "green", 300, 120, "obstacle");
-    myWall1 = new component(10,200, "brown", 300, 120 )
+    myWall1 = new component(10,200, "brown", 300, 120,"Wall1")
     myScore = new component("30px", "Consolas", "black", 40, 40, "text");
     myGameArea.start();
     
@@ -70,7 +70,12 @@ function component(width, height, color, x, y, type) {
         // ctx.lineWidth = 30;
         // ctx.strokeStyle = "#000000";
         ctx.stroke();
-          }else()=>{}
+          }else if(this.type == "obstacle"){
+
+
+          }
+          
+          else()=>{}
 
         // ctx.beginPath();
         // ctx.arc(this.x,this.y,100,0,2*Math.PI);

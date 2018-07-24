@@ -182,7 +182,8 @@ canvas {
 	font-style: normal;
 	font-variant: normal;
     font-weight: 500;
-    background-color: rgb(200, 200, 206);
+    /* background-color: rgb(200, 200, 206); */
+    background: radial-gradient(rgb(221, 221, 221),rgb(192, 192, 192), rgb(153, 153, 153));
 	/* background:  */
 
 }
