@@ -59,23 +59,24 @@ $("#startGame").click(function(){
     
             $("#startGame").fadeOut();
             $("#demo").fadeOut("slow");
-            $("#demo").fadeOut(1000);
+            $("#demo").fadeOut(1000).delay(3000);
             $("h1").css("color: red");
             // $("h1").slideDown("slow");
             $("h1").animate({
                 left: '250px',
-                opacity: '0.5',
+                opacity: '0.8',
                 Color: "rgb(255, 0, 0)",
-                height: '+=150px',
-                fontSize: "10em"
+                height: '+=250px',
+                fontSize: "10em",
+                opacity: '-0.1'
                 
 
                 // width: '150px'
             
             });
-            $("h1").css("color: red");
+            $("#startGameHTML").css("color: red");
             // $("h1").fadeOut(3000);
-            $("h1").slideUp("slow").hide(3000,storyOne());
+            $("#startGameHTML").delay(300).slideUp("slow").hide(3000,storyOne());
             // function sleep(delay) {
             //     var start = new Date().getTime();
             //     while (new Date().getTime() < start + delay);
@@ -91,8 +92,8 @@ function storyOne(){
    
     
     // $("#demo").text("Olix Awakens");
-    $("#storyOne").show().append("<p class='mt-5 pt-5'>Olix Awakens</p>");
+    $("#storyOne").show().append("<p class='mt-5 pt-5'>Olix Awakens</p>").delay(1000).append("<p class='mt-1 pt-1'>He's tired after a long battle at Wigloft</p>");
 
-    
+
     // $("#startGameHTML").empty();
 };
