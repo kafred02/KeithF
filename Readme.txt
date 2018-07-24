@@ -11,7 +11,7 @@ the backend of this page, and make the posts vertical on the page.
 Photos - This uses embeded links from instagram.  'embed.js' is continuing to fail to load (on some pages), and I'm investigating the issue. 
 This page will have an assortment of pictures from instagrams, and other posts.
 
-Videos = This page includes videos that my Roommate, and I make called 'The Dapper House'.  It includes embeded links from the youtube
+Videos - This page includes videos that my Roommate, and I make called 'The Dapper House'.  It includes embeded links from the youtube
 videos, and is formatted using bootstrap.
 
 Games - 
