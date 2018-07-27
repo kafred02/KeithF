@@ -91,9 +91,14 @@ $("#startGame").click(function(){
 function storyOne(){
    
     
-    // $("#demo").text("Olix Awakens");
-    $("#storyOne").show().append("<p class='mt-5 pt-5'>Olix Awakens</p>").delay(1000).append("<p class='mt-1 pt-1'>He's tired after a long battle at Wigloft</p>");
-
+    // $("#demo").text("Olix Awakens");storyOne
+    $("#storyOne").show().append("<p class='mt-5 pt-5'>Olix Awakens</p>").delay(1000).append("<p class='mt-1 pt-1'>He's tired after a long battle at Wigloft</p>").append("<button> continue </button>");
+        $("button").click(function(){
+        
+        $("#storyOne").empty();
+            // alert("This is a test");
+            $("#storyOne").show().append("<p class='mt-5 pt-5'>It has been a long and treacherous war that has been going on for many centuries. </p>").delay(1000).append("<p class='mt-1 pt-1'>Many say a legend has been born that will stop the bloodshed...</p>").append("<button> continue </button>");
+        });
 
     // $("#startGameHTML").empty();
 };
